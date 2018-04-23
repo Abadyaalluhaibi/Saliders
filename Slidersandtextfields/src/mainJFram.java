@@ -16,7 +16,7 @@ public class mainJFram extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField textField_h;
 	JSlider sliderH;
 	private JSlider slider_1;
 	/**
@@ -50,12 +50,12 @@ public class mainJFram extends JFrame {
 		
 		JSlider slider = new JSlider();
 		slider.addChangeListener(new ChangeListener() {
-			public void stateChanged(ChangeEvent arg0) {
+			public void stateChanged(ChangeEvent e) {
 				// update textFieldh
 				JSlider me = (JSlider)e.getSource();
 				
 				//update the textfiled 
-				textFieldh.setText9("" + me.getValue());
+				textField_h.setText("" + me.getValue());
 				
 			}
 		});
@@ -80,18 +80,18 @@ public class mainJFram extends JFrame {
 		slider_1.setBounds(42, 49, 64, 135);
 		contentPane.add(slider_1);
 		
-		textField_1 = new JTextField();
-		textField_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+		textField_h = new JTextField();
+		textField_h.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
 				
-				JTextFelid me = (JTexField)e.getSource();
+				JTextField me = (JTextField)e.getSource();
 				sliderH.setValue(Integer.parseInt(me.getText()));
 				
 			}
 		});
-		textField_1.setBounds(360, 17, 64, 38);
-		contentPane.add(textField_1);
-		textField_1.setColumns(50);
+		textField_h.setBounds(360, 17, 64, 38);
+		contentPane.add(textField_h);
+		textField_h.setColumns(50);
 		
 		slider_1 = new JSlider();
 		slider_1.setMinorTickSpacing(100);
